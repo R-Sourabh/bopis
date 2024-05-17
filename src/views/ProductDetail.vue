@@ -91,7 +91,7 @@
         </div>
     
         <div>
-          <h3> {{ translate({  },"order reservtions at the store")}} </h3>
+          <h3> {{ translate('order reservtions at the store', { count: reservedQuantity }) }} </h3>
           <div class="reservation-section">
 
             <ion-card>
@@ -222,6 +222,7 @@ export default defineComponent({
       warehouseInventory: 0,
       otherStoresInventoryDetails: [] as any,
       selectedSegment: 'inStore',
+      reservedQuantity: 0
     }
   },
   computed: {
